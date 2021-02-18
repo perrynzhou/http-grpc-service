@@ -1,0 +1,22 @@
+syntax = "proto3";
+import "google/api/annotations.proto";
+option go_package = ".;pb";
+
+
+message CalulatorRequest {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message CalulatorResponse {
+  int32 result = 1;
+}
+
+service Calulator {
+  rpc Calculate (CalulatorRequest) returns (CalulatorResponse) {
+    option (google.api.http) = {
+      post: "/"
+      body: "*"
+    };
+  };
+}
