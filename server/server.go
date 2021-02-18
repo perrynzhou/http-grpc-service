@@ -20,9 +20,9 @@ import (
 )
 
 var (
-	srvHost = flag.String("s", "127.0.0.1", "define url for connected server")
-	srvPort = flag.Int("p", 6666, "define port for connected server")
-	interval = flag.Duration("t",5,"internal time second for show metric")
+	srvHost  = flag.String("s", "127.0.0.1", "define url for connected server")
+	srvPort  = flag.Int("p", 6666, "define port for connected server")
+	interval = flag.Int("t", 5, "internal time second for show metric")
 )
 
 type CalculatorServer struct {
@@ -123,7 +123,7 @@ func main() {
 	s.Run()
 	sigs := make(chan os.Signal, 1)
 	signal.Notify(sigs, os.Interrupt, syscall.SIGTERM, syscall.SIGINT, syscall.SIGKILL)
-	ticker := time.NewTicker(*interval * time.Second)
+	ticker := time.NewTicker(time.Duration(*interval) * time.Second)
 	defer ticker.Stop()
 	var count uint64
 	for {
