@@ -33,7 +33,7 @@ Usage of ./server:
   -s string
         define url for connected server (default "127.0.0.1")
 
-[perrynzhou@linuxzhou ~/data/Source/perrynzhou/nginx-tester-service/server]$ ./server  -p 6666 -s 127.0.0.1
+[perrynzhou@linuxzhou ~/data/Source/perrynzhou//http-grpc-service/server]$ ./server  -p 6666 -s 127.0.0.1
 INFO[0000] start httpService on  6667                   
 INFO[0000] start grpcService on  6666  
 
@@ -42,7 +42,7 @@ INFO[0000] start grpcService on  6666
 // client -g 指定协程的并发数
 // client -s 指定服务端的端口，如果是grpc请求就指定服务端的grpc端口；否则指定服务端的http端口
 // client -t 指定请求类型，有2个类型，一个是grpc,另外一个是http
-[perrynzhou@linuxzhou ~/data/Source/perrynzhou/nginx-tester-service/client]$ ./client  -h
+[perrynzhou@linuxzhou ~/data/Source/perrynzhou//http-grpc-service/client]$ ./client  -h
 Usage of ./client:
   -g int
         define number of  goroutine (default 1)
