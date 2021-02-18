@@ -20,7 +20,7 @@ import (
 )
 
 var (
-	srvHost = flag.String("h", "127.0.0.1", "define url for connected server")
+	srvHost = flag.String("s", "127.0.0.1", "define url for connected server")
 	srvPort = flag.Int("p", 6666, "define port for connected server")
 )
 
