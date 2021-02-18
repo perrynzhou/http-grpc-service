@@ -1,4 +1,4 @@
-# nginx-tester-service
+# http-grpc-service
 
 
 ### 用途
@@ -12,7 +12,7 @@
 
 - 下载源代码
 ```
-git clone https://github.com/perrynzhou/nginx-tester-service.git
+git clone https://github.com/perrynzhou/http-grpc-service.git
 ```
 
 - 编译客户端和服务端
